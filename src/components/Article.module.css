@@ -1,0 +1,11 @@
+.Article{
+
+    & h3{
+        color: red;
+        text-decoration: underline;
+    }
+    
+    & p{
+        color: yellow;
+    }
+}

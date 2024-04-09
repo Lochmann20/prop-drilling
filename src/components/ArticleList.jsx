@@ -1,15 +1,21 @@
 import Article from "./Article";
-function ArticleList() {
+
+function ArticleList({articles}) {
   return (
     <div>
       <h2>Vores artikler</h2>
       <div className="grid">
-        <Article />
-        <Article />
-        <Article />
+      {articles.map((article) => { 
+        return <Article header={article.header} content={article.content} />;
+      })} 
       </div>
     </div>
   );
 }
 
 export default ArticleList;
+
+
+ 
+ 
+ 

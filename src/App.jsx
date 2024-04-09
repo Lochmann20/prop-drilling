@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ArticleList from "./components/ArticleList";
+import Navigation from "./components/navigation";
+
 function App() {
   const data = {
     username: "mig",
@@ -16,9 +18,10 @@ function App() {
   };
   return (
     <>
-      <Header />
-      <ArticleList />
-      <Footer />
+      <Navigation />
+      <Header username={data.username} email={data.email}/>
+      <ArticleList articles={data.articles}/>
+      <Footer email={data.contactInfo.email}/>
     </>
   );
 }
